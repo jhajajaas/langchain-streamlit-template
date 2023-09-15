@@ -30,7 +30,7 @@ def get_text():
     return input_text
 
 # First time running
-if len(st.session_state.past) == 0:
+if not st.session_state.past:
     user_input = "สวัสดีค่ะ ช่วยตอบคำถามหน่อยได้มั้ยคะ?"
 
 user_input = get_text()
