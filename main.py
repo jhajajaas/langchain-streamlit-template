@@ -26,14 +26,10 @@ if "past" not in st.session_state:
 
 
 def get_text():
-    input_text = st.text_input("You: ", "", key="input")
+    input_text = st.text_input("You: ", "สวัสดีค่ะ ช่วยตอบคำถามหน่อยได้มั้ยคะ?", key="input")
     return input_text
 
-# First time running
-if len(st.session_state.past) == 0:
-    user_input = st.text_input("You: ", "สวัสดีค่ะ ช่วยตอบคำถามหน่อยได้มั้ยคะ", key="input")
-else:
-    user_input = get_text()
+user_input = get_text()
 
 if user_input:
     output = chain.run(input=user_input)
