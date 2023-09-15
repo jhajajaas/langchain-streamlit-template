@@ -31,7 +31,7 @@ def get_text():
 
 # First time running
 if len(st.session_state.past) == 0:
-    user_input = "สวัสดีค่ะ ช่วยตอบคำถามหน่อยได้มั้ยคะ?"
+    user_input = st.text_input("You: ", "สวัสดีค่ะ ช่วยตอบคำถามหน่อยได้มั้ยคะ", key="input")
 else:
     user_input = get_text()
 
