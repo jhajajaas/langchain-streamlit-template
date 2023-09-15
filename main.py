@@ -30,10 +30,8 @@ def get_text():
     return input_text
 
 # First time running
-input = "สวัสดีค่ะ ช่วยตอบคำถามหน่อยได้มั้ยคะ?"
-output = chain.run(input=input)
-st.session_state.past.append(input)
-st.session_state.generated.append(output)
+if len(st.session_state.past) == 0:
+    user_input = "สวัสดีค่ะ ช่วยตอบคำถามหน่อยได้มั้ยคะ?"
 
 user_input = get_text()
 
