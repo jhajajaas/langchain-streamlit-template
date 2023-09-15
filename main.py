@@ -26,7 +26,7 @@ if "past" not in st.session_state:
 
 
 def get_text():
-    input_text = st.text_input("You: ", "สวัสดีค่ะ มีอะไรให้ช่วยมั้ยคะ?", key="input")
+    input_text = st.text_input("You: ", "สวัสดีค่ะ ช่วยตอบคำถามหน่อยได้มั้ย?", key="input")
     return input_text
 
 
